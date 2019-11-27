@@ -33,10 +33,9 @@ input:active.visually-hidden
 
 .form
   position: fixed
-  // position absolute
   display flex
-  top: 30%
-  left: 30%
+  top calc((100% - 481px)/2);
+  left calc((100% - 665px)/2);
   width 665px
   height 481px
   background-color #FFFFFF
@@ -88,7 +87,6 @@ input:active.visually-hidden
   color #7C7C7C
   &:hover 
     color #5A61ED
-    
   
 .contact-filter__item
   border none
@@ -119,7 +117,6 @@ input:active.visually-hidden
   &:hover
     background-color #F4F5FC
     
-  
 .contact-filter__input--name,
 .contact-filter__input--surname
   padding-bottom 4px
@@ -147,13 +144,14 @@ input:active.visually-hidden
   cursor pointer
   appearance none
   background-color transparent
+  white-space wrap
   opacity 1
   transition opacity
   transition-duration 0.2s
   transition-timing-function ease-in-out
   transition-delay 0s
   width 154px
-  height 32px
+  min-height 32px
   color #ffffff
   background-color #5A61ED
   box-sizing border-box
@@ -334,6 +332,71 @@ input:active.visually-hidden
 .account-text
   padding-top 5px
   
+
+@media screen and (max-width: 1023px)
+  .text
+    display none
+    top calc((100% - 481px)/2)
+    left calc((100% - 665px)/2)
+    
+  .filter
+    width 100%
+    max-width 100%
+    
+   .date::before
+    left: 180px
+
 @media screen and (max-width: 767px)
   .form
     flex-direction column
+    width 100%
+    min-width 320px
+    top 0
+    left 0
+    
+  .contact-form
+    width 100%
+    
+  .select-container
+    justify-content flex-start
+    
+  .input-wrapper
+  .input-container
+    flex-direction column
+    
+  .input-name
+  .select-wrap
+  .input-email
+    width 100%
+  
+  .contact-filter__input--email
+    width 100%
+    
+  .input-email
+  .input-gender
+    margin-left 0
+    
+  .contact-filter__item
+    width 100%
+    max-width 320px
+    
+  .contact-filter__wrapper
+    width 100%
+    
+  .pass-container
+    width 100%
+    
+  .pass-wrap
+    flex-direction column
+    
+  .select-container::before
+    left 135px
+    
+  .select-container::after
+    left 45px
+    
+ 
+    
+
+
+    

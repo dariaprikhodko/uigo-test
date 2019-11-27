@@ -44,7 +44,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="/assets/styles/app.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet"> -->
   </head>
 
   <body class="page">
@@ -64,57 +64,59 @@
             </p>
             <form class="contact-filter" method="post">
               <fieldset class="contact-filter__item contact-filter__item--name">
-                <label class="contact-filter__label" for="name">First Name</label>
-                <input class="contact-filter__input contact-filter__input--name" id="name" type="text" name="name" value="" placeholder="Alice" required="">
-                <label class="contact-filter__label" for="last-name">Last Name</label>
-                <input class="contact-filter__input contact-filter__input--surname" id="last-name" type="text" name="last-name" value="" placeholder="Miller" required="">
-                <select size="3" multiple name="hero[]">
-                  <option disabled>Nationality</option>
-                  <option selected value="American">American</option>
-                  <option value="Mexican">Mexican</option>
-                </select>
-                <label class="contact-filter__label" for="email">E-mail</label>
-                <input class="contact-filter__input contact-filter__input--email" id="email" type="text" name="email" value="" placeholder="alice.miller@yahoo.com" required="">
-                <label class="contact-filter__label" for="name">Date of Birth</label>
-                <select size="5" multiple name="day">
-                  <option disabled>day</option>
-                  <option selected value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                </select>
-                <select size="5" multiple name="month">
-                  <option disabled>month</option>
-                  <option selected value="December">December</option>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                </select>
-                <select size="5" multiple name="year">
-                  <option disabled>year</option>
-                  <option selected value="1995">1995</option>
-                  <option value="1996">1996</option>
-                  <option value="1997">1997</option>
-                  <option value="1998">1998</option>
-                  <option value="1999">1999</option>
-                </select>
-                <label class="filter-legend">Gender</label>
-                <ul class="filter-list">
-                  <li class="filter-list__option">
-                    <input class="filter-list__radio" type="radio" name="gender" id="male" checked>
-                    <label class="filter-list__label" for="male">Male</label>
-                  </li>
-                  <li class="filter-option">
-                    <input class="filter-list__radio" type="radio" name="gender" id="female">
-                    <label class="filter-list__label" for="female">Female</label>
-                  </li>
-                </ul>
-                <label class="contact-filter__label" for="name">Password</label>
-                <input class="contact-filter__input contact-filter__input--name" id="password" type="text" name="password" value="" placeholder="" required="">
-                <label class="contact-filter__label" for="last-name">Confirm Password</label>
-                <input class="contact-filter__input contact-filter__input--name" id="confirm" type="text" name="confirm" value="" placeholder="" required="">
+                <div class="contact-filter__wrapper">
+                  <label class="contact-filter__label" for="name">First Name</label>
+                  <input class="contact-filter__input contact-filter__input--name" id="name" type="text" name="name" value="" placeholder="Alice" required="">
+                  <label class="contact-filter__label" for="last-name">Last Name</label>
+                  <input class="contact-filter__input contact-filter__input--surname" id="last-name" type="text" name="last-name" value="" placeholder="Miller" required="">
+                  <select size="3" multiple name="hero[]">
+                    <option disabled>Nationality</option>
+                    <option selected value="American">American</option>
+                    <option value="Mexican">Mexican</option>
+                  </select>
+                  <label class="contact-filter__label" for="email">E-mail</label>
+                  <input class="contact-filter__input contact-filter__input--email" id="email" type="text" name="email" value="" placeholder="alice.miller@yahoo.com" required="">
+                  <label class="contact-filter__label" for="name">Date of Birth</label>
+                  <select size="5" multiple name="day">
+                    <option disabled>day</option>
+                    <option selected value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                  </select>
+                  <select size="5" multiple name="month">
+                    <option disabled>month</option>
+                    <option selected value="December">December</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                  </select>
+                  <select size="5" multiple name="year">
+                    <option disabled>year</option>
+                    <option selected value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                  </select>
+                  <label class="contact-filter__label" for="gender">Gender</label>
+                  <ul class="filter-list">
+                    <li class="filter-list__option">
+                      <input class="filter-list__radio" type="radio" name="gender" id="male" checked>
+                      <label class="filter-list__label" for="male">Male</label>
+                    </li>
+                    <li class="filter-option">
+                      <input class="filter-list__radio" type="radio" name="gender" id="female">
+                      <label class="filter-list__label" for="female">Female</label>
+                    </li>
+                  </ul>
+                  <label class="contact-filter__label" for="name">Password</label>
+                  <input class="contact-filter__input contact-filter__input--name" id="password" type="text" name="password" value="" placeholder="" required="">
+                  <label class="contact-filter__label" for="last-name">Confirm Password</label>
+                  <input class="contact-filter__input contact-filter__input--name" id="confirm" type="text" name="confirm" value="" placeholder="" required="">
+                </div>
               </fieldset>
               <p>
                 Have an account?

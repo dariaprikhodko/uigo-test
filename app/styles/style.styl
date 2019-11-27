@@ -1,15 +1,10 @@
-@font-face
-  font-family 'Work Sans'
-  font-style normal
-  font-weight normal
-    
 body
-  position relative
+  // position relative
   background-color #F4F5FC
   min-width 320px
   margin 0
   padding 0
-  font-family 'Work Sans'
+  font-family WorkSans
   font-size 14px
   line-height 16px
   font-style normal
@@ -18,6 +13,9 @@ body
 img
   max-width 100%
   height auto
+  
+input 
+  background-color transparent    
 
 .visually-hidden:not(:focus):not(:active)
 input:focus.visually-hidden
@@ -34,25 +32,308 @@ input:active.visually-hidden
   overflow hidden
 
 .form
-  position absolute
+  position: fixed
+  // position absolute
   display flex
-  top 50%
-  left 35%
+  top: 30%
+  left: 30%
   width 665px
   height 481px
   background-color #FFFFFF
   
 .text
+  position relative
+  display flex
   width 138px
   background-color #5A61ED
   
 .form__column--text
+  position absolute
+  top 350px
+  left 20px
+  font-family ptSans
+  font-size 49px
+  line-height 63px
   color #FFFFFF
   transform rotate(-90deg)
+  white-space nowrap
+  margin-top auto
   
 .contact-form
-  width 411px
+  display flex
+  height 100%
+  flex-direction column
   
 .filter
-  padding 30px 20px
+  width 100%
+  max-width 528px
+  padding 40px 22px 35px 20px
+  background-image: url("../noun.png")
+  background-repeat: no-repeat
+  background-position: bottom right
   
+.contact-form__title
+  font-size 22px
+  line-height 26px
+  font-weight 500
+  
+.contact-form__details
+  font-weight 300
+  
+.contact-filter__label
+  margin-bottom 5px
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color #7C7C7C
+  &:hover 
+    color #5A61ED
+    
+  
+.contact-filter__item
+  border none
+  
+.contact-filter__wrapper
+  display flex
+  flex-direction column
+  margin-top 20px
+  
+.input-wrapper
+  display flex
+  margin-bottom 18px
+  
+.input-container
+  display flex
+  margin-bottom 25px
+  
+.input-wrap 
+  display flex
+  flex-direction column
+  width 50%
+  
+.contact-filter__input
+  border none
+  border-bottom 1px solid #F2F2F2
+  color #000000
+  transition all .2s ease-in-out
+  &:hover
+    background-color #F4F5FC
+    
+  
+.contact-filter__input--name,
+.contact-filter__input--surname
+  padding-bottom 4px
+  color #000000
+  
+.pass-wrap
+  display flex
+  width 100%
+  
+.pass-container
+  display flex
+  flex-direction column
+  
+.account-wrap
+  display flex
+  margin-top auto
+  
+.button
+  display block
+  margin-left auto
+  text-decoration none
+  text-align center
+  vertical-align middle
+  box-sizing border-box
+  cursor pointer
+  appearance none
+  background-color transparent
+  opacity 1
+  transition opacity
+  transition-duration 0.2s
+  transition-timing-function ease-in-out
+  transition-delay 0s
+  width 154px
+  height 32px
+  color #ffffff
+  background-color #5A61ED
+  box-sizing border-box
+  font-family ptSans
+  font-style normal
+  font-size 14px
+  line-height 18px
+  text-align center
+  border none
+
+  &:hover
+    opacity 0.7
+    
+.select-wrap
+  display flex
+  flex-direction column
+  width 48%
+
+.select
+  display block
+  color #000000
+  padding-bottom 4px
+  max-width 100% 
+  box-sizing border-box
+  margin 0 
+  border none
+  border-bottom 1px solid #F2F2F2
+  -moz-appearance none
+  -webkit-appearance none
+  appearance none
+  background-color #fff
+  &:hover
+    background-color #F4F5FC
+
+.select-container
+  position relative
+  display flex
+  justify-content space-between
+  
+.select-nation
+  width 234px
+  
+.select-day
+  width 56px
+  
+.select-month
+  width 91px
+  
+.select-year
+  display block
+  width 68px
+  
+.select-container::before
+  content: ""
+  position: absolute
+  right: 0
+  top: 3px
+  width: 8px
+  height: 4px
+  background-image: url("../check.svg")
+  background-repeat: no-repeat
+  background-position: center center
+  
+.select-container::after
+  content: ""
+  position: absolute
+  left: 48px
+  top: 5px
+  width: 8px
+  height: 4px
+  background-image: url("../check.svg")
+  background-repeat: no-repeat
+  background-position: center center
+  
+.date
+  position relative
+  
+.date::before
+  content: ""
+  position: absolute
+  left: 148px
+  top: 24px
+  width: 8px
+  height: 4px
+  z-index 5
+  background-image: url("../check.svg")
+  background-repeat: no-repeat
+  background-position: center center
+  
+.filter-list
+  display flex
+  
+.input-name
+  width 49%
+  &:nth-child(2n)
+    margin-left auto
+    
+.input-email
+.input-gender
+  margin-left auto
+  
+.input-email
+  position relative
+
+  
+.pass-container
+  width 49%
+  &:nth-child(2n)
+    margin-left auto
+    
+.login-link
+  color #5A61ED
+  &:hover
+    opacity 0.7
+
+.contact-filter__input--email
+  padding-bottom 4px
+
+.input-email::before
+  content ""
+  position absolute
+  right 0
+  top: 20px
+  width: 11px
+  height 8px
+  background-image url("../shape.svg")
+  background-repeat no-repeat
+  background-position center center
+  
+.filter-list__radio + label::before
+  content ""
+  position: absolute
+  left 0
+  top 0
+  width 12px
+  height 12px
+  border-radius 50%
+  border 0.7px solid #5A61ED
+  &:hover
+    opacity 0.7
+
+.filter-list__radio:checked + label::after
+  content ""
+  position absolute
+  left 3.9px
+  top 4.4px
+  width 6px
+  height 6px
+  border-radius 50%
+  background-color #5A61ED
+  &:hover
+    opacity 0.7
+  
+.filter-list__label
+  padding-left 22px
+  &:hover
+    opacity 0.7
+    color #5A61ED
+  
+.filter-list__option
+  position relative
+  
+  &:nth-child(2n)
+    margin-left 18px
+  
+.contact-filter__input::-webkit-input-placeholder
+  color: #000000
+
+.contact-filter__input::-moz-placeholder
+  color: #000000
+
+.contact-filter__input:-moz-placeholder
+  color: #000000
+
+.contact-filter__input:-ms-input-placeholder
+  color: #000000 
+  
+.account-text
+  padding-top 5px
+  
+@media screen and (max-width: 767px)
+  .form
+    flex-direction column
